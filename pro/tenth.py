@@ -5,7 +5,7 @@ import xlwt
 
 with open('../text/student.txt',encoding='utf-8') as f:
     students_dict = OrderedDict(json.load(f))
-    #print(students_dict)
+print(students_dict)
 
 wb = xlwt.Workbook()  #创建一个工作簿
 ws = wb.add_sheet('student') #创建一个sheet
@@ -19,4 +19,4 @@ for k,v in students_dict.items():
         print(item)
         col += 1
     row +=1
-wb.save('../text/student.xls')  #保存
+ #保存
